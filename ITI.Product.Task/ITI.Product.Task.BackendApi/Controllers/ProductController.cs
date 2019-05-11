@@ -7,9 +7,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ITI.Product.Task.BackendApi.Controllers
 {
+    /// <summary>
+    ///  
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class ProductController : ControllerBase
     {
+
     }
 }

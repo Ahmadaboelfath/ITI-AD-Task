@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ITI.Product.Task.BackendApi.Entities;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,10 +27,12 @@ namespace ITI.Product.Task.BackendApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddDbContext<ProductDbContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env,
+            ILoggerFactory loggerFactory, ProductDbContext productDbContext)
         {
             if (env.IsDevelopment())
             {
@@ -43,6 +46,9 @@ namespace ITI.Product.Task.BackendApi
 
             app.UseHttpsRedirection();
             app.UseMvc();
+            productDbContext.EnsureSeedDataForContext();
+
+            
         }
     }
 }
