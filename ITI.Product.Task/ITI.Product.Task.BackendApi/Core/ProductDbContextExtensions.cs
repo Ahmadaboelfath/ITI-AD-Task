@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ITI.Product.Task.BackendApi.Entities
+namespace ITI.Product.Task.BackendApi.Core
 {
     public static class ProductDbContextExtensions
     {
@@ -14,9 +14,9 @@ namespace ITI.Product.Task.BackendApi.Entities
             context.SaveChanges();
 
             //init seed data
-            var products  = new List<Product>()
+            var products  = new List<Domain.Product>()
             {
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("9A2170C7-79C6-4D9E-9A07-9BD5A238ECF2"),
                     ProductName = "Laptop",
@@ -25,7 +25,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/laptop.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("0C40D6D4-DD75-49D3-9DE0-E158EB4519CA"),
                     ProductName = "Mobile",
@@ -34,7 +34,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/Mobile.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("EFDF41FB-7021-4F12-A3AF-089A6FD9B168"),
                     ProductName = "LCD",
@@ -43,7 +43,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/LCD.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("039247E1-FB0E-48D3-B9B1-3B8E872F4903"),
                     ProductName = "LED",
@@ -52,7 +52,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/LEDTV.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("B6D497D2-2C40-4B63-AF18-074F0E885080"),
                     ProductName = "PS4",
@@ -61,7 +61,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/PS4.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("3886EE88-D69D-42DF-B1D9-C02BAD03FA0D"),
                     ProductName = "LEDLamp",
@@ -70,7 +70,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/LEDLamp.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("D58267E3-5505-40D4-B24A-0D60F8F44057"),
                     ProductName = "Pen",
@@ -79,7 +79,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/Pen.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("A30CA4BC-9143-48EC-8EFC-9FE518255FEE"),
                     ProductName = "Blue T-Shirt ",
@@ -88,7 +88,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/BlueTshirt.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("13A7A464-24DE-433A-978F-B14AE67D5E6D"),
                     ProductName = "Shirt",
@@ -97,7 +97,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/Shirt.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("13B193BE-0A0F-4A6A-86BC-343FA6A7BF05"),
                     ProductName = "Key Chain",
@@ -106,7 +106,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/KeyChain.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("747502FD-BA91-472A-B10E-C3996F896CF2"),
                     ProductName = "Bottle",
@@ -115,7 +115,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/bottle.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("840AC259-5E6D-46EF-8F35-657927E196EB"),
                     ProductName = "Comb",
@@ -124,7 +124,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/comb.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("67088324-E231-48C1-BAC5-14279021B791"),
                     ProductName = "Thermal Cup",
@@ -133,7 +133,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/thermalcup.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("18172B8D-3E32-4DF8-B18E-B0C599A9AAFC"),
                     ProductName = "Air Freshner",
@@ -142,7 +142,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/AirFreshner.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("932F8FD5-1F6F-4081-9702-93225489FE5E"),
                     ProductName = "Wallet",
@@ -151,7 +151,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/Wallet.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("4A197E85-D459-4182-B026-6A95FAA3F36D"),
                     ProductName = "Socks",
@@ -160,7 +160,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/Socks.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("94109011-E054-4CA5-904D-4531FE277F8C"),
                     ProductName = "Shoes",
@@ -169,7 +169,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/Shoes.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("52BAD898-BC6D-450C-A159-B7AAD38D62CC"),
                     ProductName = "Sports Shoes",
@@ -178,7 +178,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/SportsShoes.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("6E0DACAD-FA21-4B86-AE4A-1E1A4DFB2D47"),
                     ProductName = "Book",
@@ -187,7 +187,7 @@ namespace ITI.Product.Task.BackendApi.Entities
                     ImageUrl = "~/Images/Book.png"
                 },
 
-                new Product()
+                new Domain.Product()
                 {
                     Id = new Guid("BA81AEB0-C9E6-43DE-90B5-ED400AA2D0BA"),
                     ProductName = "Headphones",

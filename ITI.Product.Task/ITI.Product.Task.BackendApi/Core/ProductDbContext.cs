@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using ITI.Product.Task.BackendApi.Core;
 
-namespace ITI.Product.Task.BackendApi.Entities
+namespace ITI.Product.Task.BackendApi.Core
 {
     /// <summary>
     /// The database context class that manages database transactions
@@ -8,7 +9,7 @@ namespace ITI.Product.Task.BackendApi.Entities
     public class ProductDbContext : DbContext
     {
         // Dbsets for the domain classes
-        public DbSet<Product> Products { get; set; }
+        public DbSet<Domain.Product> Products { get; set; }
 
         // Configuring database
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
