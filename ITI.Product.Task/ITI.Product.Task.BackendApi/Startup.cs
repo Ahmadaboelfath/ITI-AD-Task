@@ -24,9 +24,9 @@ namespace ITI.Product.Task.BackendApi
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
             services.AddDbContext<ProductDbContext>();
-            services.AddSingleton<IUnitOfWork, UnitOfWork>();
-            //register the unit of work
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            //register the unit of work
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
